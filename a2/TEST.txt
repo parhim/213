@@ -1,0 +1,58 @@
+For how we tested, we wrote tests for every instruction that has been implemented. In order, we step one instruction to the other using either 1, 2 or 3 different sorts of tests for each instruction. Throughout our code we access variables and copy values to registers appropriately for the test that follows. 
+
+Memory-Access Instructions:
+
+load immediate: a1, a2, a3, a4, a8, a13
+	                b18, b19, b22, b33, b, 38
+we test this throughout our entire test file, as we continue to copy values to registers. As you can see in our first chuck of tests (that have been stored (.pos 0x100) we copy the address of variables, and then in our second chuck of tests (.pos0x2000) we copy values directly into registers. 
+
+load base + offset: a5, a6, a9
+we test this, with zero offset and also with 0x08 offset to confirm that offset function. The expected values have been written into the test file. 
+
+load indexed: a7, a10
+we test this with two different unique cases. The expected values have been written into the test file. 
+
+store base + offset: a11, a12
+we test this with the offset being both 0 and 0x04 to confirm the offset is functioning properly. The expected values have been written into the test file. 
+
+store indexed: a14
+we use one unique case that implements this function thoroughly and displays its actions well. The expected values have been written into the test file. 
+
+
+ALU Instructions: 
+
+rr move: b16
+we use one test to display this simple instruction which copies a register’s contents to another register. The expected values have been written into the test file. 
+
+add: b17, b20
+we use two tests to display the addition of negative and positive numbers. The expected values have been written into the test file. 
+
+and: b21, b23
+we use two tests to display the and of positive and negative bits. The expected values have been written into the test file. 
+
+inc: b24, b25
+we use two tests to show a negative value adding one and a positive value adding one. The expected values have been written into the test file. 
+
+inc addr: b28, b29
+we use two tests to show a negative value adding four and a positive value adding four. The expected values have been written into the test file. 
+
+dec: b26, b27
+we use two tests to show a negative value subtracting one and a positive value subtracting one. The expected values have been written into the test file. 
+
+dec addr: b30, b31, b32
+we use use three tests to show a positive value subtracting four until it is a negative value, a negative value subtracting four for show it subtracts correctly, and a positive value subtracting four to equal a positive value. The expected values have been written into the test file. 
+
+not: b34, b35, b37
+what the not function does it that it flips the bits and then adds one, so we display in our tests how -1 nots to 0, and how 0 nots to -1. Then we show a positive value that nots to a negative, which was our case b37 that nots 2 to -3. 
+
+shift left: b39
+this function shifts the bits to the left,and use a positive value for “v”. The expected values have been written into the test file. 
+
+shift right: b40
+this function shifts the bits to the right, and uses a negative value for “v”. The expected values have been written into the test file. 
+
+nop: b41
+nothing happens
+
+halt: a15, b42
+this halts the program

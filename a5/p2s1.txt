@@ -1,0 +1,2 @@
+There is a dangling pointer in pop. Pop is freeing e, while returning a pointer to char array. Since we free w, but we call for e when we return e->name causing w,x,y,z to be dangling pointers. We fix this by passing buffer arrays and copy memory to them. 
+

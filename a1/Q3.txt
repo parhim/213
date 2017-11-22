@@ -1,0 +1,2 @@
+Ex. 2D12122D 
+byte 1 should be the same as byte 4, byte 2 should be the same as byte 3. It has to read the same thing from left to right and from right to left (In bytes)

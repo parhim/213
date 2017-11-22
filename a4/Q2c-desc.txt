@@ -1,0 +1,2 @@
+1. one access to read s.z in memory 
+2. one more access to read s.z->x[i] in memory 

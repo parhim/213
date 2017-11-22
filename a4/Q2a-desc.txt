@@ -1,0 +1,1 @@
+1. reading s & x (which are both static variables) - the value of s.x[i] which is stored in memory 

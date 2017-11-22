@@ -1,0 +1,2 @@
+s->d2->a = s->d1->b - Two reads (s and then s->d1->b) and Two writes (s and s->d2): 4 access to memory 
+s->d1->a = s->d2->b - Two reads (s and then s->d2->b) and Two writes (s and s->d1): 4 access to memory 

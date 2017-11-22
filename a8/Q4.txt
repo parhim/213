@@ -1,0 +1,1 @@
+For testing we ran it several times with a few different i values and it was working correctly. The number of consumer waits was in general greater than producer's. The histogram added up to 2*NUM_ITERATIONS.

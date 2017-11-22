@@ -1,0 +1,31 @@
+Data:
+time ./aRead 1
+1
+
+real	0m0.015s
+user	0m0.011s
+sys	0m0.003s
+
+___________________
+time ./aRead 10
+10
+
+real	0m0.015s
+user	0m0.011s
+sys	0m0.003s
+___________________
+time ./aRead 100
+85328
+
+real	0m0.016s
+user	0m0.012s
+sys	0m0.003s
+___________________
+time ./aRead 1000
+151168
+
+real	0m0.018s
+user	0m0.012s
+sys	0m0.004s
+———————————————————
+The execution time is much faster in this case and not linear. It is so because it doesn’t need to wait until each read is done.

@@ -1,0 +1,11 @@
+Tests for Endianness:
+00 00 00 00 gives BE:0 LE:0 //Both 0
+ff ff ff ff gives BE:-1 LE:-1 //maximum hex case
+80 00 00 00 gives BE:-2147483648 LE:128 //most negative big-endian
+00 00 00 80 gives BE:128 LE:-2147483648 //most negative little-endian
+7f ff ff ff gives BE:2147483647 LE:-129 //most positive big-endian
+ff ff ff 7f gives BE:-129 LE:2147483647 //most positive little-endian
+00 00 00 01 gives BE:1 LE:16777216 //little-endian is counterintuitive
+01 00 00 00 gives BE:16777216 LE:1 //big-endian is counterintuitive
+3f f6 ca bb gives BE:1073138363 LE:-1144326593 // random big values
+ff 00 0c 11 gives BE:-16774127 LE:285999359

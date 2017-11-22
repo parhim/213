@@ -1,0 +1,2 @@
+The computer on Hubble uses big-endian and i7 is little endian. On big-endian systems 521,829 is stored as 0007F665; -2,207,359 is stored as FFDE5181.Our little-endian computer sent the bytes in the opposite order. The correct input would be the decimal values for reversed hex values.
+So, RA = 1710622464 and D = -2125340929.

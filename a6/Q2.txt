@@ -1,0 +1,3 @@
+2a. stack uses a stack to keep track of the return pointers. Reg on the other hand just keeps the return pointer in a register. 
+2b. The stack implementation is more useful for complex programs. For example, ping could potentially make calls to other function without worrying about getting the return pointer confused. The recursion corresponds to the amount of memory, not the registers. 
+2c. The reg implementation is more useful for small programs and is faster for these smaller programs. It doesn't require as many read's and write's to memory. 

@@ -1,0 +1,14 @@
+Data:
+		sRead 1
+real	0m0.015s
+
+		sRead 10
+real	0m0.113s
+
+		sRead 100
+real	0m1.089s
+
+		sRead 1000
+real	0m10.872s
+
+The time grows linearly. This happens because  disk_wait_for_reads() is called and it makes the computer wait until the read is complete. This is wasting CPU time.

@@ -1,0 +1,22 @@
+time ./tRead 10
+r	0m0.020s
+u	0m0.000s
+s	0m0.016s
+
+time./tRead 100
+r	0m0.069s
+u	0m0.000s
+s	0m0.064s
+
+time./tRead 1000
+r	0m0.545s
+u	0m0.008s
+s	0m0.528s
+
+——
+
+Observation:
+tRead runtime grows substantially when compared to aRead - therefore, this basically means that tRead is slower than aRead 
+
+Explanations: 
+Because tRead uses multiple threads - and blocking/unblocking, causes CPU to go between threads. When a change to another thread is needed, the current one needs to be saved on stack - which then forces tRead to take more time as the blocks continue to increase. Therefore, resulting in the processing of threads for tRead to take more time and be slower. 
